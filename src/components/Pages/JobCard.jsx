@@ -1,9 +1,20 @@
 import React from 'react';
 import {AiOutlineDollar } from "react-icons/ai";
 import { MdOutlineLocationOn } from "react-icons/md";
+import { useNavigate } from 'react-router-dom';
+
+
+
 
 const JobCard = ({job}) => {
-    const {logo, job_title, company_name, remote_or_onsite, job_type, location, salary} = job;
+    const navigate = useNavigate();
+   
+
+    const {id, logo, job_title, company_name, remote_or_onsite, job_type, location, salary} = job;
+    const handleViewDetails = () => {
+        navigate(`/jobs/${id}`)
+    }
+
     return (
         <div className='border-[E8E8E8] border py-10 pl-10'>
             <img className='w-[116px]' src={logo} alt="" />
@@ -17,7 +28,7 @@ const JobCard = ({job}) => {
                 <p className='flex items-center gap-1 text-[#757575]'><MdOutlineLocationOn className='text-2xl'/> <span className='text-xl font-semibold'>{location}</span></p>
                 <p className='flex items-center gap-1 text-[#757575]'><AiOutlineDollar className='text-2xl'/> <span className='text-xl font-semibold'>{salary}</span></p>
             </div>
-            <button className="mt-6 btn capitalize bg-gradient-to-r from-[#7E90FE] to-[#9873FF] text-white">View Details</button>
+            <button onClick={handleViewDetails} className="mt-6 btn capitalize bg-gradient-to-r from-[#7E90FE] to-[#9873FF] text-white">View Details</button>
         </div>
     );
 };

@@ -2,9 +2,9 @@ import React from 'react';
 import { NavLink } from 'react-router-dom';
 
 const Header = () => {
-    const style={background: 'linear-gradient(90deg, rgba(126, 144, 254, 0.05) 0%, rgba(152, 115, 255, 0.05) 100%)'}
+ 
     return (
-        <nav style={style}>
+        <nav className='pt-8 linear-bg'>
             <div className="navbar bg-base-100 max-w-[1320px] mx-auto">
               <div className="navbar-start">
                 <div className="dropdown">
