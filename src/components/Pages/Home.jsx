@@ -5,10 +5,16 @@ import Featured from './Featured';
 
 const Home = () => {
     return (
-        <div className='max-w-[1320px] mx-auto'>
-            <Banner></Banner>
-            <Category></Category>
-            <Featured></Featured>
+        <div>
+            <div className='linear-bg'>
+                <div className='max-w-[1320px] mx-auto'>
+                    <Banner></Banner>
+                </div>
+            </div>
+            <div className='max-w-[1320px] mx-auto'>
+                <Category></Category>
+                <Featured></Featured>
+            </div>
         </div>
     );
 };

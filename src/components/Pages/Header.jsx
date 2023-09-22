@@ -5,7 +5,7 @@ const Header = () => {
  
     return (
         <nav className='pt-8 linear-bg'>
-            <div className="navbar bg-base-100 max-w-[1320px] mx-auto">
+            <div className="navbar max-w-[1320px] mx-auto">
               <div className="navbar-start">
                 <div className="dropdown">
                   <label tabIndex={0} className="btn btn-ghost lg:hidden">

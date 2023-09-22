@@ -1,8 +1,7 @@
 import React from 'react';
-
 const Banner = () => {
     return (
-        <div className='flex gap-[70px] justify-between mt-10 items-center'>
+        <div className='flex gap-[70px] justify-between pt-10 items-center linear'>
             {/* text section */}
             <div className='w-1/2'>
                 <h2 className='text-[80px] font-extrabold leading-tight'>One Step Closer To Your <br /><span className='linear-text'>Dream Job</span></h2>
