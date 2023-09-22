@@ -10,7 +10,7 @@ const Banner = () => {
             </div>
             {/* picture section  */}
             <div className='w-1/2'>
-                <img src="/public/images/user.png" alt="" />
+                <img src="images/user.png" alt="" />
             </div>
         </div>
     );
