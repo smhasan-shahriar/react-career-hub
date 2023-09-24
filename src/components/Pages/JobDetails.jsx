@@ -20,7 +20,28 @@ const JobDetails = () => {
   } = job;
 
   const handleSelectJob = () => {
-    saveJobsToStorage(intId);
+    // saveJobsToStorage(intId);
+    // direct method 
+   
+    const appliedJobs = JSON.parse(localStorage.getItem('job-applied'));
+    if (!appliedJobs){
+      const appliedNewJob = []
+      appliedNewJob.push(job);
+      localStorage.setItem('job-applied', JSON.stringify(appliedNewJob));
+    }
+    else{
+      const exists = appliedJobs.find(list => list.id === job.id);
+      if(exists){
+        toast("already applied");
+        return; 
+      }
+      else{
+        const appliedNewJob = [...appliedJobs, job]
+        localStorage.setItem('job-applied', JSON.stringify(appliedNewJob));
+      }
+    }
+   
+    
     toast("You have successfully applied for this job");
   };
 

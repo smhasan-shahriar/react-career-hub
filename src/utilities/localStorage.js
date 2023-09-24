@@ -1,5 +1,5 @@
 const getJobsFromStorage = () => {
-    const appliedJobs = localStorage.getItem('jobs-applied');
+    const appliedJobs = localStorage.getItem('job-applied');
     if (appliedJobs){
         return JSON.parse(appliedJobs);
     }
@@ -13,7 +13,7 @@ const saveJobsToStorage = (id) => {
     const exists = appliedJobs.includes(id);
     if(!exists){
         appliedJobs.push(id);
-        localStorage.setItem('jobs-applied', JSON.stringify(appliedJobs));
+        localStorage.setItem('job-applied', JSON.stringify(appliedJobs));
     }
 }
 
